@@ -123,7 +123,7 @@ public class StreamPopulator {
       StreamPopulator populator = new StreamPopulator(
           line.getOptionValue("bucketRegion", "us-east-1"),
           line.getOptionValue("bucketName", "nyc-tlc"),
-          line.getOptionValue("objectPrefix", "trip data/"),
+          line.getOptionValue("objectPrefix", "trip data/yellow"),
           line.getOptionValue("streamRegion", DEFAULT_REGION_NAME),
           line.getOptionValue("streamName", "taxi-trip-events"),
           line.hasOption("aggregate"),
