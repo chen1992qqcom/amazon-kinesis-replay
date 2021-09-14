@@ -50,7 +50,7 @@ public class EventReader implements Iterator<JsonEvent> {
     this.bucketName = bucketName;
     this.eventParser = new JsonEvent.Parser(speedupFactor, timestampAttributeName);
 
-    ListObjectsV2Request request = ListObjectsV2Request.builder().bucket(bucketName).startAfter(prefix).build();
+    ListObjectsV2Request request = ListObjectsV2Request.builder().bucket(bucketName).prefix(prefix).build();
     this.s3Objects = s3.listObjectsV2Paginator(request).contents().iterator();
 
     //initialize next and hasNext fields
